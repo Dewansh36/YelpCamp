@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/sheets/app.css">
+    <div id="map"></div>
+    <h1>All Campgrounds: </h1>
+    <ul>
+        <% for( let camp of campgrounds) { %>
+            <div class="card mb-3">
+                <div class=" row">
+                    <div class="col-md-4">
+                        <% if (camp.images.length) { %>
+                            <img src="<%= camp.images[0].url %> " class="img-fluid" alt="Campground Image">
+                            <% } else { %>
+                                <img src="https://t4.ftcdn.net/jpg/04/61/59/41/240_F_461594111_SlglNPNs8Hkdd0dMUpUzbKpvHJS5VIp8.jpg"
+                                    alt="No image Uploaded">
+                                <% } %>
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= camp.title %>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= camp.location %>
+                            </h6>
+                            <p class="card-text">
+                                <%= camp.description %>
+                            </p>
+                            <a href="/campgrounds/<%= camp.id %> " class="btn btn-primary">View <%= camp.title %> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </ul>
+    <div>
+        <a href="/campgrounds/new"><button>Create New Campground</button></a>
+    </div>
+    <script>
+        const mbxToken='<%- process.env.mapbox_token %>';
+        const campgrounds={ features: <%- JSON.stringify(campgrounds)%>};
+    </script>
+    <script src="/scripts/cluster_map.js"></script>

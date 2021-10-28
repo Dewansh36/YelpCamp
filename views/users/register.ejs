@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card-body">
+                    <img src="https://media.istockphoto.com/photos/medical-mask-suitcase-with-sun-hat-camera-passport-airplane-ticket-picture-id1251305801?b=1&k=20&m=1251305801&s=170667a&w=0&h=3tnrNbghQ0ZB8aRMyL63SiAmNZJvPTWIUtnCMCAsfLo="
+                        alt="" class="card-img-top">
+                    <h5 class="card-title">Register</h5>
+                    <form action="/register" method="post" novalidate class="validated-form">
+                        <div class="mb-2">
+                            <label class="form-label" for="username">Username: </label>
+                            <input class="form-control" type="text" name="username" id="username" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label" for="email">Email: </label>
+                            <input class="form-control" type="email" name="email" id="email" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label" for="password">Password: </label>
+                            <input class="form-control" type="password" name="password" id="password" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="d-block d-grid gap-2">
+                            <button class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <form action="/register" method="post" novalidate class="validated-form">
+        <div class="col-6 offset-3">
+            <h1>Register</h1>
+            <div class="mb-2">
+                <label class="form-label" for="username">Username: </label>
+                <input class="form-control" type="text" name="username" id="username" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="email">Email: </label>
+                <input class="form-control" type="email" name="email" id="email" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="password">Password: </label>
+                <input class="form-control" type="password" name="password" id="password" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <button class="btn btn-success">Register</button>
+    </form> -->
