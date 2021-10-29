@@ -3,8 +3,8 @@ mapboxgl.accessToken=mbxToken;
 const map=new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
-    center: [-103.5917, 40.6699],
-    zoom: 3
+    center: [78.023511, 23.323834],
+    zoom: 1.5
 });
 
 map.on('load', () => {

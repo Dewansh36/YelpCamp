@@ -13,6 +13,10 @@ imageSchema.virtual('thumbnail').get(function () {
     return this.url.replace('/upload', '/upload/w_200');
 });
 
+imageSchema.virtual('indexThumbnail').get(function () {
+    return this.url.replace('/upload', '/upload/w_400');
+});
+
 const opts={ toJSON: { virtuals: true } };
 
 const campGroundSchema=new Schema(

@@ -14,14 +14,13 @@
                     <a class="nav-link" href="/campgrounds/new">New</a>
                 </li>
             </ul>
-            <div class="navbar-nav mr-auto">
+            <div class="navbar-nav ms-auto">
                 <a href="/login" class="nav-link"><button class="btn btn-secondary">Login</button></a>
                 <% if (user!=undefined) { %>
                     <a href="/logout" class="nav-link"><button class="btn btn-secondary">Logout</button></a>
                     <% } else { %>
                         <a href="/register" class="nav-link"><button class="btn btn-secondary">Register</button></a>
                         <% } %>
-
             </div>
         </div>
     </div>
